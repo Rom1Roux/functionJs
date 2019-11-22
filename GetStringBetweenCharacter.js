@@ -4,7 +4,7 @@
 @param(string) second character affter the string to get
 @return(string) return string between charac1 and charac2
 ***/
-console.log(getStrCharac("Test [1234]", "[", "]")); // return '1234'
+console.log(getStringBetweenCharacter("Test [1234]", "[", "]")); // return '1234'
 
 function getStringBetweenCharacter(str, charac1, charac2){
   return str.substring(
