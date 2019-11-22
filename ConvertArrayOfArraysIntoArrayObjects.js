@@ -1,7 +1,10 @@
+
 /*** Function to convert an Array of arrays into an Array of objects 
- * return => [{name:"Romain", email:"romain@test.com", age:"36", city:"Toulouse"}, 
- *            {name:"Yann", email:"yann@test.com", age:"38", city:"Paris"}]
- ***/
+* @param(Array) this is an Array of Arrays
+* @return(Array) return an Array of Objects => 
+        [{name:"Romain", email:"romain@test.com", age:"36", city:"Toulouse"}, 
+ *      {name:"Yann", email:"yann@test.com", age:"38", city:"Paris"}]
+***/
 
 var result = convertIntoArrayOfObject([ [ 'Romain',
     'romain@test.com',
@@ -14,12 +17,12 @@ var result = convertIntoArrayOfObject([ [ 'Romain',
     console.log(result);
 
 function convertIntoArrayOfObject(array){
-return array.map(function(x) { 
-  return { 
-    name: x[0], 
-    email: x[1],
-    age: x[2],
-    city: x[3]
-  }; 
-});
+    return array.map(function(x) { 
+        return { 
+            name: x[0], 
+            email: x[1],
+            age: x[2],
+            city: x[3]
+        }; 
+    });
 }
