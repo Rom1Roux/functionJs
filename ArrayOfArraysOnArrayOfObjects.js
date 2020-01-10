@@ -5,9 +5,9 @@
 */
 function arrOfArrOnArrOfObj(headers, data){
   var eventsArr = [];
-  for (var i = 0; i < headers.length; i++) {
+  for (var i = 0; i < data.length; i++) {
     var newEvent = {};
-    for (var j = 0; j < data.length; j++) {
+    for (var j = 0; j < headers.length; j++) {
       newEvent[headers[j]] = data[i][j];
   };
   eventsArr.push(newEvent);
