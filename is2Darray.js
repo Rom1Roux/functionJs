@@ -1,7 +1,7 @@
 /**
 * This function test if it's a 2D array
 *
-* param {Array} arr must an array or 2D array
+* param {Array} arr must an array simple or 2D
 * return {Boolean} return boolean
 */
 function is2DArr(arr){
