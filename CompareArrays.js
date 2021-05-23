@@ -15,6 +15,17 @@ function compareArrays(arr1, arr2) {
   return false
 }
 
+/**
+ * Version ES6
+ * This function is used to find out if one of the elements is identical in the two arrays
+ * @param{array} first array
+ * @param{array} second array
+ * @return{bolean} return true if any items are the same in both arrays else false
+ */
+function compareArrays2(arr1, arr2) {
+  return arr1.map((el) => arr2.indexOf(el) > -1).filter((el) => el).length > 0;
+}
+
 var tab1 = ['banana', 'orange', 'cherry'];
 var tab2 = ['lemon', 'banana', 'apple', 'pear'];
 console.log(compareArrays(tab1, tab2)); // return true
