@@ -1,4 +1,5 @@
 /**
+* Version ES5
 * Function to add (complete) the same object in an array of objects
 * @param{array} array that contains objects
 * @param{object} object to add in array of objects
@@ -13,6 +14,16 @@ function addObjOnArray(arr, obj) {
   }
   return arr;
 }
+
+/**
+ * Version ES6 with spread operator
+ * Function to add (complete) the same object in an array of objects
+ * @param{array} array that contains objects
+ * @param{object} object to add in array of objects
+ * @return{array} return array of objects completed
+ */
+const addObjOnArray2 = (arr, obj) => [...arr, obj];
+
 
 var tab = [{name : 'Romain', hoobies : 'rock climbing'}, {name:'Max', hoobies:'Lego'}];
 var obj1 = {city : 'Toulouse'};
