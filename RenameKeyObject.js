@@ -34,4 +34,4 @@ const columns = [
   { title: "Essai", key: "essai" }
 ];
 
-console.log(renameKey(obj, columns));
+console.log(renameKey(obj, columns)); // return {Test: "pouf", Essai: "kjhlkh"}
