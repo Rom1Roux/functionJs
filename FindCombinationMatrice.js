@@ -1,14 +1,14 @@
 /**
  * Find all combinations follow column length
- * @param {Number} length is columns length
+ * @param {Number} length is column length
  * @returns {Array} return Array of arrays (contains booleans)
  */
 const findCombinationMatrice = (length = 5) => {
   let res = [];
-  let doublons = 0;
+  let combFound = 0;
   const maxCombination = Math.pow(2, length); // maximum number of possibilities
 
-  while (doublons < maxCombination) {
+  while (combFound < maxCombination) {
     
     let row = new Array(length).fill(false).map(() => getRandomBool_());
 
@@ -20,9 +20,9 @@ const findCombinationMatrice = (length = 5) => {
 
       res.push(row);
 
-      doublons += 1;
+      combFound += 1;
       console.log("combination : ", row);
-      console.log("doublons : ", doublons);
+      console.log("number of combinations found : ", combFound);
     }
   }
   console.log("result : ", res);
