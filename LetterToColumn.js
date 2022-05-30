@@ -19,13 +19,16 @@ const letterToColumn = (letter) => {
 
 
 /**
- * convert single range (ex: A2) to understandable numeric value for javascript loops
+ * convert simple range sheet (A2) to understandable numeric value for javascript loops
  * Example with A2 : column A becomes number 0, row 2 becomes number 1
  * @param {String} range
  * @returns {Object} contains column and row number
  */
 const rangeSheetToNumericJs = (range) => {
-  const row = parseInt(range.match(/\d+/g)[0]);
+  let searchDigital = parseInt(range.match(/\d+/g));
+  resultDigit = isNaN(searchDigital) ? undefined : searchDigital; // check if a value is NaN or not
+  const row = searchDigital.length > 0 ? searchDigital[0] : searchDigital;
+
   let letter = range.match(/[a-zA-Z]+/g)[0];
 
   letter = letter.toUpperCase();
@@ -33,5 +36,5 @@ const rangeSheetToNumericJs = (range) => {
   for (let i = 0; i < length; i++) {
     column += (letter.charCodeAt(i) - 64) * Math.pow(26, length - i - 1);
   }
-  return { column: column - 1, row: row - 1 };
+  return { column: column - 1, row: row - 1 || undefined };
 }
